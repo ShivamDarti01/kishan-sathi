@@ -1,0 +1,5 @@
+import { Leaf, ShieldCheck, Sprout } from "lucide-react";
+
+export function About() {
+  return <div className="subpage"><div className="page-intro"><div className="eyebrow"><span className="eyebrow-dot" /> OUR PURPOSE</div><h1>About Kishan-Sathi AI</h1><p>सही पहचान, बेहतर फसल · Smart Farming, Healthy Crops</p></div><section className="panel about-panel"><span className="about-mark"><Leaf size={27} /></span><h2>A thoughtful companion for your farm.</h2><p>Kishan-Sathi AI is designed to help farmers explore crop-leaf health with image-based AI when a genuine trained model is configured. We aim to make the workflow approachable while being honest about uncertainty and model limitations.</p><div className="about-values"><div><ShieldCheck size={20} /><strong>Careful by design</strong><span>AI suggestions are never presented as confirmed diagnoses.</span></div><div><Sprout size={20} /><strong>Grounded guidance</strong><span>No invented treatment instructions or pesticide dosages.</span></div></div></section></div>;
+}
