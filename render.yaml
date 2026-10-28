@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: kishan-sathi-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.4
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: kishan-sathi-db
+          property: connectionString
+      - key: ALLOWED_ORIGINS
+        value: "*"
+
+databases:
+  - name: kishan-sathi-db
+    databaseName: kishan_sathi
+    user: kishan_sathi
+    plan: free
